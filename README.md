@@ -2,12 +2,12 @@
 
 ## Valencià
 
-Repositori d activitats JClic en format web (HTML5), amb catàleg unificat en JSON i estructura preparada per a desplegament estàtic.
+Repositori d'activitats JClic en format web (HTML5), amb catàleg unificat en JSON i estructura preparada per a desplegament estàtic.
 
 ### Contingut principal
 
 - activities/: paquets .jclic.zip organitzats per a execució local en play.html.
-- data/activities.json: catàleg d activitats utilitzat per la interfície.
+- data/activities.json: catàleg d'activitats utilitzat per la interfície.
 - index.html: portada i navegació per seccions.
 - play.html: reproductor per a activitats locals.
 - assets/: estils, scripts i imatges de la interfície.
@@ -60,11 +60,11 @@ Variables configurables per entorn:
 
 En el repositori hi ha utilitats per a migració i neteja del catàleg dins de scripts/.
 
-També es poden executar auditories d enllaços (locals i online) sobre data/activities.json per a verificar:
+També es poden executar auditories d'enllaços (locals i online) sobre data/activities.json per a verificar:
 
 - existència de rutes locals,
 - integritat de paquets .jclic.zip,
-- disponibilitat HTTP d enllaços online.
+- disponibilitat HTTP d'enllaços online.
 
 ### Llicència
 
