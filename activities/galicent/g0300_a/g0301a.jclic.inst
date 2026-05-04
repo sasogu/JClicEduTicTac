@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Quina hora és? Quin dia som? Què m'agrada? (Iniciació)" authors="Josep Pi i Mallarach, Francesc Busquets i Burguera, Maria Areny i Busquets, Lluïsa Bruch i Salada, Montserrat Torra i Puigdellívol" folder="galicent/g0300_a">
+ <file src="g0301a_intro.jclic.zip" />
+ <file src="g0301a.jclic.zip" />
+ <file src="g0302a.jclic.zip" />
+ <file src="g0303a.jclic.zip" />
+ <file src="g0304a.jclic.zip" />
+ <file src="g0305a.jclic.zip" />
+ <file src="pell.png" />
+ <file src="gali.xml" />
+ <file src="g0301a.jclic.inst" />
+ <shortcut project="g0301a_intro.jclic.zip" text="Quina hora és? Quin dia som? Què m'agrada? (Iniciació)" description="" icon="" />
+</JClicInstall>
+

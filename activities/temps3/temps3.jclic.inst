@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El temps atmosfèric" authors="Joan Verdaguer i Andrés" folder="temps3">
+ <file src="temps3.jclic.zip" />
+ <file src="temps3.jclic.inst" />
+ <shortcut project="temps3.jclic.zip" text="El temps atmosfèric" description="" icon="" />
+</JClicInstall>
+

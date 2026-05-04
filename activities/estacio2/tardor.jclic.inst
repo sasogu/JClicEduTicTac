@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La tardor" authors="Helena Xaus" folder="estacio2">
+ <file src="tardor.jclic.zip" />
+ <file src="tardor.jclic.inst" />
+ <shortcut project="tardor.jclic.zip" text="La tardor" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El treball abans i ara" authors="Joan Verdaguer i Andrés" folder="abans3">
+ <file src="abans3.jclic.zip" />
+ <file src="abans3.jclic.inst" />
+ <shortcut project="abans3.jclic.zip" text="El treball abans i ara" description="" icon="" />
+</JClicInstall>
+

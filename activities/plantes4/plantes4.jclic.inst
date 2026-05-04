@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Les plantes" authors="Joan Verdaguer i Andrés" folder="plantes4">
+ <file src="plantes4.jclic.zip" />
+ <file src="plantes4.jclic.inst" />
+ <shortcut project="plantes4.jclic.zip" text="Les plantes" description="" icon="" />
+</JClicInstall>
+

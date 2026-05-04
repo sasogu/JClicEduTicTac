@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El gall, la gallina i el pollet" authors="Rosa Vilaró Morató, Veu: Núria Vargas Vilaró" folder="jclic">
+ <file src="pollet.jclic.zip" />
+ <file src="pollet.jclic.inst" />
+ <shortcut project="pollet.jclic.zip" text="El gall, la gallina i el pollet" description="" icon="" />
+</JClicInstall>
+

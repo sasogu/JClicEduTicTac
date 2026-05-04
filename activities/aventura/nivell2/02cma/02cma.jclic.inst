@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Noms propis" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell2/02cma">
+ <file src="02cma.jclic.zip" />
+ <file src="02cma.jclic.inst" />
+ <shortcut project="02cma.jclic.zip" text="Noms propis" description="" icon="" />
+</JClicInstall>
+

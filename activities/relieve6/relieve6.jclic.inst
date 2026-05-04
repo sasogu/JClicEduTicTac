@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El relieve y la hidrografía de España" authors="José Antonio Sánchez Rivas" folder="relieve6">
+ <file src="relieve6.jclic.zip" />
+ <file src="relieve6.jclic.inst" />
+ <shortcut project="relieve6.jclic.zip" text="El relieve y la hidrografía de España" description="" icon="" />
+</JClicInstall>
+

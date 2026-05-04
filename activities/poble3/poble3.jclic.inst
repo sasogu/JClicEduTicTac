@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El poble" authors="Joan Verdaguer i Andrés" folder="poble3">
+ <file src="poble3.jclic.zip" />
+ <file src="poble3.jclic.inst" />
+ <shortcut project="poble3.jclic.zip" text="El poble" description="" icon="" />
+</JClicInstall>
+

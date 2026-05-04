@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Les pistes del passat" authors="Joan Verdaguer i Andrés" folder="pistes4">
+ <file src="pistes4.jclic.zip" />
+ <file src="pistes4.jclic.inst" />
+ <shortcut project="pistes4.jclic.zip" text="Les pistes del passat" description="" icon="" />
+</JClicInstall>
+

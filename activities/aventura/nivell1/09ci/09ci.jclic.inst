@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Nombres" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell1/09ci">
+ <file src="09ci.jclic.zip" />
+ <file src="09ci.jclic.inst" />
+ <shortcut project="09ci.jclic.zip" text="Nombres" description="" icon="" />
+</JClicInstall>
+

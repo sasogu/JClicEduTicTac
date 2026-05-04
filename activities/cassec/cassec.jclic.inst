@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Adaptació d'activitats Babel de llengua castellana per a secundària" authors="Carme Muñoz Gimeno i Silvano Andrés de la Morena" folder="cassec">
+ <file src="cassec.jclic.zip" />
+ <file src="cassec.jclic.inst" />
+ <shortcut project="cassec.jclic.zip" text="Adaptació d'activitats Babel" description="" icon="" />
+</JClicInstall>
+

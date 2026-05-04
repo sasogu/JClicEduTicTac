@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Camps semàntics" authors="M Carme Cabra i Vilalta" folder="camp_ sem">
+ <file src="camp_sem.jclic.zip" />
+ <file src="camp_sem.jclic.inst" />
+ <shortcut project="camp_sem.jclic.zip" text="Camps semàntics" description="" icon="" />
+</JClicInstall>
+

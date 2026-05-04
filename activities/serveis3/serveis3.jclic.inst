@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Els serveis" authors="Joan Verdaguer i Andrés" folder="serveis3">
+ <file src="serveis3.jclic.zip" />
+ <file src="serveis3.jclic.inst" />
+ <shortcut project="serveis3.jclic.zip" text="Els serveis" description="" icon="" />
+</JClicInstall>
+

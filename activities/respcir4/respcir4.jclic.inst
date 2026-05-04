@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La respiració i la circulació" authors="Joan Verdaguer i Andrés" folder="respcir4">
+ <file src="respcir4.jclic.zip" />
+ <file src="respcir4.jclic.inst" />
+ <shortcut project="respcir4.jclic.zip" text="La respiració i la circulació" description="" icon="" />
+</JClicInstall>
+

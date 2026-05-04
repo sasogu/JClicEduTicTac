@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El nostre entorn" authors="Joan Verdaguer i Andrés" folder="entorn4">
+ <file src="entorn4.jclic.zip" />
+ <file src="entorn4.jclic.inst" />
+ <shortcut project="entorn4.jclic.zip" text="El nostre entorn" description="" icon="" />
+</JClicInstall>
+

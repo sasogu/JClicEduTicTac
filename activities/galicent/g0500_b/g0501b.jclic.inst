@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Què faig? Què compro? On vaig? (Aprofundiment)" authors="Josep Pi i Mallarach, Francesc Busquets i Burguera, Maria Areny i Busquets, Lluïsa Bruch i Salada, Montserrat Torra i Puigdellívol" folder="galicent/g0500_b">
+ <file src="g0501b_intro.jclic.zip" />
+ <file src="g0501b.jclic.zip" />
+ <file src="g0502b.jclic.zip" />
+ <file src="g0503b.jclic.zip" />
+ <file src="g0504b.jclic.zip" />
+ <file src="g0505b.jclic.zip" />
+ <file src="pell.png" />
+ <file src="gali.xml" />
+ <file src="g0501b.jclic.inst" />
+ <shortcut project="g0501b_intro.jclic.zip" text="Què faig? Què compro? On vaig? (Aprofundiment)" description="" icon="" />
+</JClicInstall>
+

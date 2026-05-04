@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La prehistòria al Moianès" authors="Isabel Marcos Hidalgo" folder="prehimo1">
+ <file src="prehimo.jclic.inst" />
+ <file src="prehimo.jclic.zip" />
+ <file src="prehimo1.jclic.zip" />
+ <file src="prehimo2.jclic.zip" />
+ <file src="prehimo3.jclic.zip" />
+ <shortcut project="prehimo.jclic.zip" text="La prehistòria al Moianès" description="" icon="" />
+</JClicInstall>
+

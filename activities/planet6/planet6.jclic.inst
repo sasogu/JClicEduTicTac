@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Vivim al planeta Terra" authors="Joan Verdaguer i Andrés" folder="planet6">
+ <file src="planet6.jclic.zip" />
+ <file src="planet6.jclic.inst" />
+ <shortcut project="planet6.jclic.zip" text="Vivim al planeta Terra" description="" icon="" />
+</JClicInstall>
+

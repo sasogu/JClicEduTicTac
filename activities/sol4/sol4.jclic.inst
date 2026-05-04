@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El sòl" authors="Joan Verdaguer i Andrés" folder="sol4">
+ <file src="sol4.jclic.zip" />
+ <file src="sol4.jclic.inst" />
+ <shortcut project="sol4.jclic.zip" text="El sòl" description="" icon="" />
+</JClicInstall>
+

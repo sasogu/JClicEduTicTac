@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Vocals" authors="Antoni Caralt i Montse Rodés" folder="llevant_vocals">
+ <file src="vocals.jclic.zip" />
+ <file src="u_llevant.jclic.zip" />
+ <file src="o_llevant.jclic.zip" />
+ <file src="i_llevant.jclic.zip" />
+ <file src="e_llevant.jclic.zip" />
+ <file src="a_llevant.jclic.zip" />
+ <file src="vocals.jclic.inst" />
+ <shortcut project="vocals.jclic.zip" text="llevant_vocals" description="" icon="" />
+</JClicInstall>
+

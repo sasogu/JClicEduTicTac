@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="g/gu/gü" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell3/08csa">
+ <file src="08csa.jclic.zip" />
+ <file src="08csa.jclic.inst" />
+ <shortcut project="08csa.jclic.zip" text="g/gu/gü" description="" icon="" />
+</JClicInstall>
+

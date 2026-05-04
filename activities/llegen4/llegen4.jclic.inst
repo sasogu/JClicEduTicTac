@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Llegendes i Tradicions" authors="Joan Verdaguer i Andrés" folder="llegen4">
+ <file src="llegen4.jclic.zip" />
+ <file src="llegen4.jclic.inst" />
+ <shortcut project="llegen4.jclic.zip" text="Llegendes i Tradicions" description="" icon="" />
+</JClicInstall>
+

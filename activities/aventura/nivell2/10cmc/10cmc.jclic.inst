@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Essa 3" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell2/10cmc">
+ <file src="10cmc.jclic.zip" />
+ <file src="10cmc.jclic.inst" />
+ <shortcut project="10cmc.jclic.zip" text="Essa 3" description="" icon="" />
+</JClicInstall>
+

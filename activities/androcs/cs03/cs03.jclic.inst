@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Andròmeda - Cicle Superior - 03" authors="Josep Planas i Gamundi" folder="androcs/cs03">
+ <file src="cs03.jclic.zip" />
+ <file src="pac2/pac2.jclic.zip" />
+ <file src="pac1/pac1.jclic.zip" />
+ <file src="cs03.jclic.inst" />
+ <shortcut project="cs03.jclic.zip" text="Andròmeda CS 03" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="-ava" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell1/01cia">
+ <file src="01cia.jclic.zip" />
+ <file src="01cia.jclic.inst" />
+ <shortcut project="01cia.jclic.zip" text="-ava" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Los cuerpos geométricos" authors="José Antonio Sánchez Rivas" folder="geomet2">
+ <file src="geomet2.jclic.zip" />
+ <file src="geomet2.jclic.inst" />
+ <shortcut project="geomet2.jclic.zip" text="Los cuerpos geométricos" description="" icon="" />
+</JClicInstall>
+

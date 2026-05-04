@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El paisatge rural" authors="Joan Verdaguer i Andrés" folder="rural4">
+ <file src="rural4.jclic.zip" />
+ <file src="rural4.jclic.inst" />
+ <shortcut project="rural4.jclic.zip" text="El paisatge rural" description="" icon="" />
+</JClicInstall>
+

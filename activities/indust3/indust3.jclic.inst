@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La indústria" authors="Joan Verdaguer i Andrés" folder="indust3">
+ <file src="indust3.jclic.zip" />
+ <file src="indust3.jclic.inst" />
+ <shortcut project="indust3.jclic.zip" text="La indústria" description="" icon="" />
+</JClicInstall>
+

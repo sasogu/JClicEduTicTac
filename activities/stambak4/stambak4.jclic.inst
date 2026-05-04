@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Anàlisi i reproducció d'estructures rítmiques" authors="Josep Pasqual i Bardají" folder="stambak4">
+ <file src="stambak4.jclic.zip" />
+ <file src="stambak4.jclic.inst" />
+ <file src="6/6.jclic.zip" />
+ <file src="5/5.jclic.zip" />
+ <file src="4/4.jclic.zip" />
+ <file src="3/3.jclic.zip" />
+ <file src="2/2.jclic.zip" />
+ <file src="1/1.jclic.zip" />
+ <shortcut project="stambak4.jclic.zip" text="Estructures rítmiques" description="" icon="" />
+</JClicInstall>
+

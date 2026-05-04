@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biblioteca JClic EduTicTac</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="header-inner"><h1>Biblioteca JClic EduTicTac</h1><div class="count"><span id="visibleCount">0</span> <span id="countLabel">en la biblioteca</span> · <span id="totalUnique">0</span> actividades</div></div>
+  <div class="tabs"><button class="tab active" data-view="libraryView">Biblioteca</button><button class="tab" data-view="allView">Todas las actividades</button></div>
+  <div class="controls"><input id="search" type="search" placeholder="Buscar actividad" autocomplete="off"><div class="locale-control"><select id="languageSelect" aria-label="Idioma"><option value="auto">Auto</option><option value="es">ES</option><option value="va">VA</option></select></div></div>
+</header>
+<main>
+    <section id="libraryView" class="view">
+    <div class="library-nav"><button id="libraryBack" class="library-back" type="button" hidden>Volver</button><div id="libraryBreadcrumb" class="breadcrumb"></div></div>
+    <p id="libraryCurrent" class="library-current"></p>
+    <div class="library-tree"></div>
+  </section>
+    <section id="allView" class="view" hidden>
+    <div class="grid"></div>
+  </section>
+  <div id="empty" class="empty">No hay actividades que coincidan con la búsqueda.</div>
+  <div id="creditsModal" class="modal" hidden aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal="credits"></div>
+    <section class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="creditsTitle">
+      <button id="creditsClose" class="modal-close" type="button" aria-label="Cerrar créditos">×</button>
+      <article class="credits-sheet">
+        <div class="credits-hero">
+          <img src="assets/images/192.png" alt="Biblioteca Ratolí">
+          <div>
+            <p class="credits-kicker">Crèdits</p>
+            <h2 id="creditsTitle" class="credits-title">Biblioteca Ratolí</h2>
+            <p class="credits-subtitle">Comunitat EduTicTac. Un poquet d'història.</p>
+          </div>
+        </div>
+        <div class="credits-meta">
+          <span class="credits-pill">Alvaro Baixauli</span>
+          <span class="credits-pill">Samuel Soriano</span>
+          <span class="credits-pill">Col·legi Jaime Balmes</span>
+          <span class="credits-pill">Comunitat Edutictac</span>
+        </div>
+        <div class="credits-copy">
+          <p>La biblioteca Ratolí la van crear mestres del col·legi Jaime Balmes l'any 2003 en grup de treball per al CEFIRE d'Elx coordinat per Alvaro Baixauli.</p>
+          <p>La biblioteca ha anat actualitzant-se gràcies principalment al treball d'Àlvaro, Samuel i altres membres de la Comunitat Edutictac que sovint fan rectificacions i propostes de millora.</p>
+          <p>Esperem que la nostra feina vos siga de profit. Si vols fer cap suggerència t'esperem en el fòrum de la Comunitat.</p>
+        </div>
+        <div class="credits-footer">
+          <span>4/05/2026</span>
+          <a href="http://edutictac.es" target="_self">edutictac.es</a>
+        </div>
+      </article>
+    </section>
+  </div>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

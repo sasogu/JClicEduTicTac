@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La Unió Europea" authors="Joan Verdaguer i Andrés" folder="unio6">
+ <file src="unio6.jclic.zip" />
+ <file src="unio6.jclic.inst" />
+ <shortcut project="unio6.jclic.zip" text="La Unió Europea" description="" icon="" />
+</JClicInstall>
+

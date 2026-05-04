@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La Terra" authors="Joan Verdaguer i Andrés" folder="terra6">
+ <file src="terra6.jclic.zip" />
+ <file src="terra6.jclic.inst" />
+ <shortcut project="terra6.jclic.zip" text="La Terra" description="" icon="" />
+</JClicInstall>
+

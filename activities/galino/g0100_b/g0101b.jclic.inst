@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Com s'escriu? Com es pronuncia? (Aprofundiment)" authors="Josep Pi i Mallarach, Francesc Busquets i Burguera, Maria Areny i Busquets, Lluïsa Bruch i Salada, Montserrat Torra i Puigdellívol" folder="galino/g0100_b">
+ <file src="g0101b_intro.jclic.zip" />
+ <file src="g0101b.jclic.zip" />
+ <file src="g0102b.jclic.zip" />
+ <file src="g0103b.jclic.zip" />
+ <file src="pell.png" />
+ <file src="gali.xml" />
+ <file src="g0101b.jclic.inst" />
+ <shortcut project="g0101b_intro.jclic.zip" text="Com s'escriu? Com es pronuncia? (Aprofundiment)" description="" icon="" />
+</JClicInstall>
+

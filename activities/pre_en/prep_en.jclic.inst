@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Prepositions of place" authors="Vanesa La-Chica López" folder="pre_en">
+ <file src="prep_en.jclic.zip" />
+ <file src="prep_en.jclic.inst" />
+ <shortcut project="prep_en.jclic.zip" text="Prepositions of place " description="" icon="" />
+</JClicInstall>
+

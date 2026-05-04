@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La música rock (1) - La història" authors="Ramon Llanes Bordes" folder="rock">
+ <file src="rock1a.jclic.zip" />
+ <file src="rock1b.jclic.zip" />
+ <file src="rock1a.jclic.inst" />
+ <shortcut project="rock1a.jclic.zip" text="La música rock (1) - La història" description="" icon="" />
+</JClicInstall>
+

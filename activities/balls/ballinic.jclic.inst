@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Ball de gitanes CI" authors="Oriol Pisos Taberner" folder="balls">
+ <file src="ballinic.jclic.zip" />
+ <file src="ballinic.jclic.inst" />
+ <shortcut project="ballinic.jclic.zip" text="Ball de gitanes CI" description="" icon="" />
+</JClicInstall>
+

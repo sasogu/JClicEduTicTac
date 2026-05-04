@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="L'aigua a la natura" authors="Joan Verdaguer i Andrés" folder="aigua3">
+ <file src="aigua3.jclic.zip" />
+ <file src="aigua3.jclic.inst" />
+ <shortcut project="aigua3.jclic.zip" text="L'aigua a la natura" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="L'estiu" authors="Helena Xaus" folder="estacio2">
+ <file src="estiu.jclic.zip" />
+ <file src="estiu.jclic.inst" />
+ <shortcut project="estiu.jclic.zip" text="L'estiu" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Què menjo? On visc? (Aprofundiment)" authors="Josep Pi i Mallarach, Francesc Busquets i Burguera, Maria Areny i Busquets, Lluïsa Bruch i Salada, Montserrat Torra i Puigdellívol" folder="galino/g0400_b">
+ <file src="g0401b_intro.jclic.zip" />
+ <file src="g0401b.jclic.zip" />
+ <file src="g0402b.jclic.zip" />
+ <file src="g0403b.jclic.zip" />
+ <file src="g0404b.jclic.zip" />
+ <file src="pell.png" />
+ <file src="gali.xml" />
+ <file src="g0401b.jclic.inst" />
+ <shortcut project="g0401b_intro.jclic.zip" text="Què menjo? On visc? (Aprofundiment)" description="" icon="" />
+</JClicInstall>
+

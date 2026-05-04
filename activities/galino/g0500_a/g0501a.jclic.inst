@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Què faig? Què compro? On vaig? (Iniciació)" authors="Josep Pi i Mallarach, Francesc Busquets i Burguera, Maria Areny i Busquets, Lluïsa Bruch i Salada, Montserrat Torra i Puigdellívol" folder="galino/g0500_a">
+ <file src="g0501a_intro.jclic.zip" />
+ <file src="g0501a.jclic.zip" />
+ <file src="g0502a.jclic.zip" />
+ <file src="g0503a.jclic.zip" />
+ <file src="g0504a.jclic.zip" />
+ <file src="g0505a.jclic.zip" />
+ <file src="pell.png" />
+ <file src="gali.xml" />
+ <file src="g0501a.jclic.inst" />
+ <shortcut project="g0501a_intro.jclic.zip" text="Què faig? Què compro? On vaig? (Iniciació)" description="" icon="" />
+</JClicInstall>
+

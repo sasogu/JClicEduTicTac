@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Els canvis en el menjar i el transport" authors="Joan Verdaguer i Andrés" folder="canvi1_5">
+ <file src="canvi1_5.jclic.zip" />
+ <file src="canvi1_5.jclic.inst" />
+ <shortcut project="canvi1_5.jclic.zip" text="Els canvis en el menjar i el transport" description="" icon="" />
+</JClicInstall>
+

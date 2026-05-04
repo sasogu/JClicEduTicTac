@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Els aliments i la digestió" authors="Joan Verdaguer i Andrés" folder="alidige4">
+ <file src="alidige4.jclic.zip" />
+ <file src="alidige4.jclic.inst" />
+ <shortcut project="alidige4.jclic.zip" text="Els aliments i la digestió" description="" icon="" />
+</JClicInstall>
+

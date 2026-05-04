@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="x/ix" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell2/08cmc">
+ <file src="08cmc.jclic.zip" />
+ <file src="08cmc.jclic.inst" />
+ <shortcut project="08cmc.jclic.zip" text="x/ix" description="" icon="" />
+</JClicInstall>
+

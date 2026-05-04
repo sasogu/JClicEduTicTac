@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Andròmeda - Cicle Mitjà - 11" authors="Josep Planas i Gamundi" folder="androcm/cm11">
+ <file src="cm11.jclic.zip" />
+ <file src="pac2/pac2.jclic.zip" />
+ <file src="pac1/pac1.jclic.zip" />
+ <file src="cm11.jclic.inst" />
+ <shortcut project="cm11.jclic.zip" text="Andròmeda MS 11" description="" icon="" />
+</JClicInstall>
+

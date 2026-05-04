@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="P" authors="Montse Rodés, Antoni Caralt" folder="P">
+ <file src="llevant_p.jclic.zip" />
+ <file src="llevant_p.jclic.inst" />
+ <shortcut project="llevant_p.jclic.zip" text="P" description="" icon="" />
+</JClicInstall>
+

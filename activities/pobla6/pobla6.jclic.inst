@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La població d'Espanya" authors="Joan Verdaguer i Andrés" folder="pobla6">
+ <file src="pobla6.jclic.zip" />
+ <file src="pobla6.jclic.inst" />
+ <shortcut project="pobla6.jclic.zip" text="La població d'Espanya" description="" icon="" />
+</JClicInstall>
+

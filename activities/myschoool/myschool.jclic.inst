@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="My school" authors="Natàlia Garcia Gonzalez, Juli Castellón Jurado, Miríam Catellón Colomina" folder="myschoool">
+ <file src="myschool.jclic.zip" />
+ <file src="myschool.jclic.inst" />
+ <shortcut project="myschool.jclic.zip" text="My school" description="" icon="" />
+</JClicInstall>
+

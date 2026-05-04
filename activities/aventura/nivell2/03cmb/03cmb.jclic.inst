@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Accents 1" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell2/03cmb">
+ <file src="03cmb.jclic.zip" />
+ <file src="03cmb.jclic.inst" />
+ <shortcut project="03cmb.jclic.zip" text="Accents 1" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="LOS DETERMINANTES" authors="Gerardo Valero Pozuelo &lt;fofergvp@teleline.es&gt;" folder="determin">
+ <file src="determi1.jclic.zip" />
+ <file src="determi1.jclic.inst" />
+ <shortcut project="determi1.jclic.zip" text="LOS DETERMINANTES" description="" icon="" />
+</JClicInstall>
+

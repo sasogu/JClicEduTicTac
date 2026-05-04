@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Els sentits" authors="Joan Verdaguer i Andrés" folder="sentits4">
+ <file src="sentits4.jclic.zip" />
+ <file src="sentits4.jclic.inst" />
+ <shortcut project="sentits4.jclic.zip" text="Els sentits" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El pas del temps" authors="Joan Verdaguer i Andrés" folder="pastemp3">
+ <file src="pastemp3.jclic.zip" />
+ <file src="pastemp3.jclic.inst" />
+ <shortcut project="pastemp3.jclic.zip" text="El pas del temps" description="" icon="" />
+</JClicInstall>
+

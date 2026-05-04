@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Egipto" authors="Lucía Ginés" folder="Escriptori">
+ <file src="egipto.jclic.zip" />
+ <file src="egipto.jclic.inst" />
+ <shortcut project="egipto.jclic.zip" text="Egipto" description="" icon="" />
+</JClicInstall>
+

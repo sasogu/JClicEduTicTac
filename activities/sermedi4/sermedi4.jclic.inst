@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Els éssers vius i el medi" authors="Joan Verdaguer i Andrés" folder="sermedi4">
+ <file src="sermedi4.jclic.zip" />
+ <file src="sermedi4.jclic.inst" />
+ <shortcut project="sermedi4.jclic.zip" text="Els éssers vius i el medi" description="" icon="" />
+</JClicInstall>
+

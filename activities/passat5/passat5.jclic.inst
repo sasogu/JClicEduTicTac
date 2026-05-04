@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Descobrir el passat" authors="Joan Verdaguer i Andrés" folder="passat5">
+ <file src="passat5.jclic.zip" />
+ <file src="passat5.jclic.inst" />
+ <shortcut project="passat5.jclic.zip" text="Descobrir el passat" description="" icon="" />
+</JClicInstall>
+

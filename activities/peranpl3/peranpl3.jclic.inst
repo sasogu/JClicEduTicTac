@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Persones, animals i plantes" authors="Joan Verdaguer i Andrés" folder="peranpl3">
+ <file src="peranpl3.jclic.zip" />
+ <file src="peranpl3.jclic.inst" />
+ <shortcut project="peranpl3.jclic.zip" text="Persones, animals i plantes" description="" icon="" />
+</JClicInstall>
+

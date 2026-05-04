@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Múltiplos y divisores" authors="José Antonio Sánchez Rivas" folder="multiplo">
+ <file src="multiplo.jclic.zip" />
+ <file src="multiplo.jclic.inst" />
+ <shortcut project="multiplo.jclic.zip" text="Múltiplos y divisores" description="" icon="" />
+</JClicInstall>
+

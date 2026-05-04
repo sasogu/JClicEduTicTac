@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="L'activitat humana i el medi al món" authors="Joan Verdaguer i Andrés" folder="medimon6">
+ <file src="medimon6.jclic.zip" />
+ <file src="medimon6.jclic.inst" />
+ <shortcut project="medimon6.jclic.zip" text="L'activitat humana i el medi al món" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="L'edat antiga" authors="Joan Verdaguer i Andrés" folder="antiga6">
+ <file src="antiga6.jclic.zip" />
+ <file src="antiga6.jclic.inst" />
+ <shortcut project="antiga6.jclic.zip" text="L'edat antiga" description="" icon="" />
+</JClicInstall>
+

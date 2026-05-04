@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="L'aparell locomotor" authors="Joan Verdaguer i Andrés" folder="locomot3">
+ <file src="locomot3.jclic.zip" />
+ <file src="locomot3.jclic.inst" />
+ <shortcut project="locomot3.jclic.zip" text="L'aparell locomotor" description="" icon="" />
+</JClicInstall>
+

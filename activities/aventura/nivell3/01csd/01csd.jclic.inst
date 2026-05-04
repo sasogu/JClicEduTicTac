@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Vocabulari" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell3/01csd">
+ <file src="01csd.jclic.zip" />
+ <file src="01csd.jclic.inst" />
+ <shortcut project="01csd.jclic.zip" text="Vocabulari" description="" icon="" />
+</JClicInstall>
+

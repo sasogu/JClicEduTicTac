@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Los verbos" authors="Juan José Mateo Molina" folder="verbos">
+ <file src="verbos.jclic.zip" />
+ <file src="verbos.jclic.inst" />
+ <file src="verbos.ico.gif" />
+ <file src="comer.hlp" />
+ <file src="haber.hlp" />
+ <file src="saltar.hlp" />
+ <file src="vivir.hlp" />
+ <shortcut project="verbos.jclic.zip" text="Los verbos" icon="verbos.ico.gif" />
+</JClicInstall>
+

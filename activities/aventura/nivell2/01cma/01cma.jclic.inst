@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="b/v" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell2/01cma">
+ <file src="01cma.jclic.zip" />
+ <file src="01cma.jclic.inst" />
+ <shortcut project="01cma.jclic.zip" text="b/v" description="" icon="" />
+</JClicInstall>
+

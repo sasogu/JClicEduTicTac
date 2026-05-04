@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Els volcans i els terratrèmols" authors="Joan Verdaguer i Andrés" folder="volterr6">
+ <file src="volterr6.jclic.zip" />
+ <file src="volterr6.jclic.inst" />
+ <shortcut project="volterr6.jclic.zip" text="Els volcans i els terratrèmols" description="" icon="" />
+</JClicInstall>
+

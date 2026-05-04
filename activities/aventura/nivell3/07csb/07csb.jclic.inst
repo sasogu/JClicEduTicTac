@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="o àtona 2" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell3/07csb">
+ <file src="07csb.jclic.zip" />
+ <file src="07csb.jclic.inst" />
+ <shortcut project="07csb.jclic.zip" text="o àtona 2" description="" icon="" />
+</JClicInstall>
+

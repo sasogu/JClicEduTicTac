@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Els aliments i l'esport" authors="Joan Verdaguer i Andrés" folder="aliesp3">
+ <file src="aliesp3.jclic.zip" />
+ <file src="aliesp3.jclic.inst" />
+ <shortcut project="aliesp3.jclic.zip" text="Els aliments i l'esport" description="" icon="" />
+</JClicInstall>
+

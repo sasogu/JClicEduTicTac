@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="les restes del nostre passat" authors="Joan Verdaguer i Andrés" folder="restes4">
+ <file src="restes4.jclic.zip" />
+ <file src="restes4.jclic.inst" />
+ <shortcut project="restes4.jclic.zip" text="Les restes del nostre passat" description="" icon="" />
+</JClicInstall>
+

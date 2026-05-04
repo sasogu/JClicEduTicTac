@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Llegim (nivell 1)" authors="Xavier Lozano Rovira" folder="llegim1">
+ <file src="llegim1.jclic.zip" />
+ <file src="llegim1.jclic.inst" />
+ <shortcut project="llegim1.jclic.zip" text="Llegim (nivell 1)" description="" icon="" />
+</JClicInstall>
+

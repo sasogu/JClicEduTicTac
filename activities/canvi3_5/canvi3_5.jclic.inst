@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Els canvis en les cases i els vestits" authors="Joan Verdaguer i Andrés" folder="canvi3_5">
+ <file src="canvi3_5.jclic.zip" />
+ <file src="canvi3_5.jclic.inst" />
+ <shortcut project="canvi3_5.jclic.zip" text="Els canvis en les cases i els vestits" description="" icon="" />
+</JClicInstall>
+

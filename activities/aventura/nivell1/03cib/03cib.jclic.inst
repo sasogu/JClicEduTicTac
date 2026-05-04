@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Dígrafs" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell1/03cib">
+ <file src="03cib.jclic.zip" />
+ <file src="03cib.jclic.inst" />
+ <shortcut project="03cib.jclic.zip" text="Dígrafs" description="" icon="" />
+</JClicInstall>
+

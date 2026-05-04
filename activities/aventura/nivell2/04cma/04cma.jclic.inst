@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Apòstrof" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell2/04cma">
+ <file src="04cma.jclic.zip" />
+ <file src="04cma.jclic.inst" />
+ <shortcut project="04cma.jclic.zip" text="Apòstrof" description="" icon="" />
+</JClicInstall>
+

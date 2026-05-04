@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Ball de gitanes CM" authors="Nara Montané" folder="ballmitj">
+ <file src="ballmitj.jclic.zip" />
+ <file src="ballmitj.jclic.inst" />
+ <shortcut project="ballmitj.jclic.zip" text="Ball de gitanes CM" description="" icon="" />
+</JClicInstall>
+

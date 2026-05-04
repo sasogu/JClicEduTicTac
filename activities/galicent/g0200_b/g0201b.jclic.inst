@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Qui sóc? Com sóc? (Aprofundiment)" authors="Josep Pi i Mallarach, Francesc Busquets i Burguera, Maria Areny i Busquets, Lluïsa Bruch i Salada, Montserrat Torra i Puigdellívol" folder="galicent/g0200_b">
+ <file src="g0201b_intro.jclic.zip" />
+ <file src="g0201b.jclic.zip" />
+ <file src="g0202b.jclic.zip" />
+ <file src="g0203b.jclic.zip" />
+ <file src="pell.png" />
+ <file src="gali.xml" />
+ <file src="g0201b.jclic.inst" />
+ <shortcut project="g0201b_intro.jclic.zip" text="Qui sóc? Com sóc? (Aprofundiment)" description="" icon="" />
+</JClicInstall>
+

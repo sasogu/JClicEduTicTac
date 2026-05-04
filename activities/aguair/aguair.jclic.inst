@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El agua y el aire" authors="José Antonio Sánchez Rivas" folder="aguair">
+ <file src="aguair.jclic.zip" />
+ <file src="aguair.jclic.inst" />
+ <shortcut project="aguair.jclic.zip" text="El agua y el aire" description="" icon="" />
+</JClicInstall>
+

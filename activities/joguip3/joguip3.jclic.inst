@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Joguines" authors="Montse Vega" folder="joguip3">
+ <file src="joguip3.jclic.zip" />
+ <file src="blanc.xml" />
+ <file src="blanc.png" />
+ <file src="joguip3.jclic.inst" />
+ <shortcut project="joguip3.jclic.zip" text="Joguines" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,17 @@
+# OS / Explorer noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local agent/tooling
+.codex/
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+
+# Local env files (keep templates like .env.example if added)
+.env
+.env.*
+!.env.example

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El treball al camp" authors="Joan Verdaguer i Andrés" folder="trebcam3">
+ <file src="trebcam3.jclic.zip" />
+ <file src="trebcam3.jclic.inst" />
+ <shortcut project="trebcam3.jclic.zip" text="El treball al camp" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Vocal neutra 4" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell3/06csd">
+ <file src="06csd.jclic.zip" />
+ <file src="06csd.jclic.inst" />
+ <shortcut project="06csd.jclic.zip" text="Vocal neutra 4" description="" icon="" />
+</JClicInstall>
+

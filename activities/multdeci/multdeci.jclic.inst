@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Multiplicación y división de números decimales" authors="José Antonio Sánchez Rivas" folder="multdeci">
+ <file src="multdeci.jclic.zip" />
+ <file src="multdeci.jclic.inst" />
+ <shortcut project="multdeci.jclic.zip" text="Multiplicación y división de números decimales" description="" icon="" />
+</JClicInstall>
+

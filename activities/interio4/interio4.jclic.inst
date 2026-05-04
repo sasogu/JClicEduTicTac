@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La vida a les comarques d'interior" authors="Joan Verdaguer i Andrés" folder="interio4">
+ <file src="interio4.jclic.zip" />
+ <file src="interio4.jclic.inst" />
+ <shortcut project="interio4.jclic.zip" text="Comarques d'interior" description="" icon="" />
+</JClicInstall>
+

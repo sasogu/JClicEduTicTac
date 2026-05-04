@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Morfosintaxi (Iniciació)" authors="Josep Pi i Mallarach, Francesc Busquets i Burguera, Maria Areny i Busquets, Lluïsa Bruch i Salada, Montserrat Torra i Puigdellívol" folder="galino/g0600_a">
+ <file src="g0601a_intro.jclic.zip" />
+ <file src="g0601a.jclic.zip" />
+ <file src="g0602a.jclic.zip" />
+ <file src="g0603a.jclic.zip" />
+ <file src="g0604a.jclic.zip" />
+ <file src="g0605a.jclic.zip" />
+ <file src="g0606a.jclic.zip" />
+ <file src="g0607a.jclic.zip" />
+ <file src="pell.png" />
+ <file src="gali.xml" />
+ <file src="g0601a.jclic.inst" />
+ <shortcut project="g0601a_intro.jclic.zip" text="Morfosintaxi (Iniciació)" description="" icon="" />
+</JClicInstall>
+

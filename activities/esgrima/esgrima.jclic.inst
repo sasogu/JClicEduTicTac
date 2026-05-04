@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La Esgrima" authors="Mª Isabel Torres Sánchez" folder="esgrima">
+ <file src="esgrima.jclic.zip" />
+ <file src="esgrima.jclic.inst" />
+ <shortcut project="esgrima.jclic.zip" text="La Esgrima" description="" icon="" />
+</JClicInstall>
+

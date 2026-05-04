@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Andròmeda - Cicle Superior - 11" authors="Josep Planas i Gamundi" folder="androcs/cs11">
+ <file src="cs11.jclic.zip" />
+ <file src="cs11.jclic.inst" />
+ <shortcut project="cs11.jclic.zip" text="Andròmeda CS 11" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El mercat: un espai per descobrir" authors="Isabel Benseny Orozco" folder="mercat_mu">
+ <file src="merca_mu.jclic.zip" />
+ <file src="merca_mu.jclic.inst" />
+ <shortcut project="merca_mu.jclic.zip" text="El mercat: un espai per descobrir" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Los polígonos" authors="José Antonio Sánchez Rivas" folder="poligono">
+ <file src="poligono.jclic.zip" />
+ <file src="poligono.jclic.inst" />
+ <shortcut project="poligono.jclic.zip" text="Los polígonos" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Andròmeda - Cicle Superior - 12" authors="Josep Planas i Gamundi" folder="androcs/cs12">
+ <file src="cs12.jclic.zip" />
+ <file src="pac5/pac5.jclic.zip" />
+ <file src="pac4/pac4.jclic.zip" />
+ <file src="pac3/pac3.jclic.zip" />
+ <file src="pac2/pac2.jclic.zip" />
+ <file src="pac1/pac1.jclic.zip" />
+ <file src="cs12.jclic.inst" />
+ <shortcut project="cs12.jclic.zip" text="Andròmeda CS 12" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Activitats de llengua: lèxic" authors="Santi Junqué, Juan Palomino, Sílvia Arrufat i Josep Melero" folder="clicllen">
+ <file src="lexic.jclic.zip" />
+ <file src="lexic.jclic.inst" />
+ <shortcut project="lexic.jclic.zip" text="Lèxic" description="Activitats de llengua: lèxic" icon="" />
+</JClicInstall>
+

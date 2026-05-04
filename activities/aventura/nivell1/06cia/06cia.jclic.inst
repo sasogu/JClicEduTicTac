@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Plurals" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell1/06cia">
+ <file src="06cia.jclic.zip" />
+ <file src="06cia.jclic.inst" />
+ <shortcut project="06cia.jclic.zip" text="Plurals" description="" icon="" />
+</JClicInstall>
+

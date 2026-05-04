@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Catalunya en l'edat moderna" authors="Joan Verdaguer i Andrés" folder="moderna6">
+ <file src="moderna6.jclic.zip" />
+ <file src="moderna6.jclic.inst" />
+ <shortcut project="moderna6.jclic.zip" text="Catalunya en l'edat moderna" description="" icon="" />
+</JClicInstall>
+

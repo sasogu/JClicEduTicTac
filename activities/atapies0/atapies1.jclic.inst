@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Antoni Tàpies. Les textures i els materials de l'entorn (I)" authors="Lourdes Martín Herrero" folder="atapies">
+ <file src="atapies1.jclic.zip" />
+ <file src="atapies1.jclic.inst" />
+ <shortcut project="atapies1.jclic.zip" text="Antoni Tàpies (I)" description="" icon="" />
+</JClicInstall>
+

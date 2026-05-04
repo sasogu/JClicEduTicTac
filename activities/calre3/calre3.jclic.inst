@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Calendaris i rellotges" authors="Joan Verdaguer i Andrés" folder="calre3">
+ <file src="calre3.jclic.zip" />
+ <file src="calre3.jclic.inst" />
+ <shortcut project="calre3.jclic.zip" text="Calendaris i rellotges" description="" icon="" />
+</JClicInstall>
+

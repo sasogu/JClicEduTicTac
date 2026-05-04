@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Els sectors d'activitats a Espanya" authors="Joan Verdaguer i Andrés" folder="sectors6">
+ <file src="sectors6.jclic.zip" />
+ <file src="sectors6.jclic.inst" />
+ <shortcut project="sectors6.jclic.zip" text="Els sectors d'activitats a Espanya" description="" icon="" />
+</JClicInstall>
+

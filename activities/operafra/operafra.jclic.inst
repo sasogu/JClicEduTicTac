@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Operaciones con fracciones" authors="José Antonio Sánchez Rivas" folder="operafra">
+ <file src="operafra.jclic.zip" />
+ <file src="operafra.jclic.inst" />
+ <shortcut project="operafra.jclic.zip" text="Operaciones con fracciones" description="" icon="" />
+</JClicInstall>
+

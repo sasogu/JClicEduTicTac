@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Les roques i els minerals" authors="Joan Verdaguer i Andrés" folder="rocamin4">
+ <file src="rocamin4.jclic.zip" />
+ <file src="rocamin4.jclic.inst" />
+ <shortcut project="rocamin4.jclic.zip" text="Les roques i els minerals" description="" icon="" />
+</JClicInstall>
+

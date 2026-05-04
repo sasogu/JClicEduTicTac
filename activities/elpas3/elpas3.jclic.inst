@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El passat del lloc on visc" authors="Joan Verdaguer i Andrés" folder="elpas3">
+ <file src="elpas3.jclic.zip" />
+ <file src="elpas3.jclic.inst" />
+ <shortcut project="elpas3.jclic.zip" text="El passat del lloc on visc" description="" icon="" />
+</JClicInstall>
+

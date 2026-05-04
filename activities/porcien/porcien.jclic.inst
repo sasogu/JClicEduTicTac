@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Porcentaje y proporcionalidad" authors="José Antonio Sánchez Rivas" folder="porcien">
+ <file src="porcien.jclic.zip" />
+ <file src="porcien.jclic.inst" />
+ <shortcut project="porcien.jclic.zip" text="Porcentaje y proporcionalidad" description="" icon="" />
+</JClicInstall>
+

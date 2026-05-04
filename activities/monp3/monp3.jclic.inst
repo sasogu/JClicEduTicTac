@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El mon et parla 1" authors="Inema estudis, Enric lópez, Maria Borrell, Imma Palahí" folder="monp3">
+ <file src="monp3.jclic.zip" />
+ <file src="monp3.jclic.inst" />
+ <shortcut project="monp3.jclic.zip" text="El mon et parla - P3" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La vida a les comarques de muntanya" authors="Joan Verdaguer i Andrés" folder="muntan4">
+ <file src="muntan4.jclic.zip" />
+ <file src="muntan4.jclic.inst" />
+ <shortcut project="muntan4.jclic.zip" text="Comarques de muntanya" description="" icon="" />
+</JClicInstall>
+

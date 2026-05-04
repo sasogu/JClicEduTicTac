@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Practica el alfabeto dactilológico (1ª parte)" authors="Pepa Vilches Vilela" folder="alfadac">
+ <file src="alfadac1.jclic.zip" />
+ <file src="alfadac1.jclic.inst" />
+ <shortcut project="alfadac1.jclic.zip" text="Practica el alfabeto dactilológico (1ª parte)" description="" icon="" />
+</JClicInstall>
+

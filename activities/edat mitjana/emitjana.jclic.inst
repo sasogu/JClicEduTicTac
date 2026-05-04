@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Edat Mitjana" authors="Susana Parareda Jurado" folder="edat mitjana">
+ <file src="emitjana.jclic.zip" />
+ <file src="em_infan/em_infan.jclic.zip" />
+ <file src="em_inici/em_inici.jclic.zip" />
+ <file src="emitjana.jclic.inst" />
+ <shortcut project="emitjana.jclic.zip" text="emitjana" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El medi natural d'Europa" authors="Joan Verdaguer i Andrés" folder="europa6">
+ <file src="europa6.jclic.zip" />
+ <file src="europa6.jclic.inst" />
+ <shortcut project="europa6.jclic.zip" text="El medi natural d'Europa" description="" icon="" />
+</JClicInstall>
+

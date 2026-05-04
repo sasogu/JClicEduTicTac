@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Els animals vertebrats" authors="Joan Verdaguer i Andrés" folder="verteb4">
+ <file src="verteb4.jclic.zip" />
+ <file src="verteb4.jclic.inst" />
+ <shortcut project="verteb4.jclic.zip" text="Els animals vertebrats" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="g/j-2" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell1/08cib">
+ <file src="08cib.jclic.zip" />
+ <file src="08cib.jclic.inst" />
+ <shortcut project="08cib.jclic.zip" text="g/j-2" description="" icon="" />
+</JClicInstall>
+

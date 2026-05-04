@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La prehistòria" authors="Joan Verdaguer i Andrés" folder="prehist6">
+ <file src="prehist6.jclic.zip" />
+ <file src="prehist6.jclic.inst" />
+ <shortcut project="prehist6.jclic.zip" text="La prehistòria" description="" icon="" />
+</JClicInstall>
+

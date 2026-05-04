@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El relleu, el clima i la vegetació" authors="Joan Verdaguer i Andrés" folder="reclim6">
+ <file src="reclim6.jclic.zip" />
+ <file src="reclim6.jclic.inst" />
+ <shortcut project="reclim6.jclic.zip" text="El relleu, el clima i la vegetació" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El so" authors="Joan Verdaguer i Andrés" folder="so3">
+ <file src="so3.jclic.zip" />
+ <file src="so3.jclic.inst" />
+ <shortcut project="so3.jclic.zip" text="El so" description="" icon="" />
+</JClicInstall>
+

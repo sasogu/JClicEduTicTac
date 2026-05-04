@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El punt" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell1/02cib">
+ <file src="02cib.jclic.zip" />
+ <file src="02cib.jclic.inst" />
+ <shortcut project="02cib.jclic.zip" text="El punt" description="" icon="" />
+</JClicInstall>
+

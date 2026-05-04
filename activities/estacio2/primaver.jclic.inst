@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La primavera" authors="Helena Xaus" folder="estacio2">
+ <file src="primaver.jclic.zip" />
+ <file src="primaver.jclic.inst" />
+ <shortcut project="primaver.jclic.zip" text="La primavera" description="" icon="" />
+</JClicInstall>
+

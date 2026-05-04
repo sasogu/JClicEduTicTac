@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="L'organització política de l'Estat" authors="Joan Verdaguer i Andrés" folder="poliest5">
+ <file src="poliest5.jclic.zip" />
+ <file src="poliest5.jclic.inst" />
+ <shortcut project="poliest5.jclic.zip" text="L'organització política de l'Estat" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JClic local</title>
+<style>
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #f4f4f4;
+}
+
+.JClic {
+  width: 100vw;
+  height: 100vh;
+}
+
+.error {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 18px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1d252c;
+  background: #fff;
+  border: 1px solid #d8dee4;
+  border-radius: 8px;
+}
+</style>
+<script>
+window.JClicDataOptions = { noInit: true };
+</script>
+<script src="jclic-js/jclic.min.js"></script>
+</head>
+<body>
+<div id="player" class="JClic"></div>
+<script>
+const params = new URLSearchParams(window.location.search);
+const project = params.get('project');
+const player = document.getElementById('player');
+
+if (!project) {
+  player.className = 'error';
+  player.textContent = 'No se ha indicado ninguna actividad local.';
+} else {
+  window.JClicObject.loadProject(player, project);
+}
+</script>
+</body>
+</html>

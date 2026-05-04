@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La casa" authors="Joan Verdaguer i Andrés" folder="lacasa2">
+ <file src="lacasa2.jclic.zip" />
+ <file src="lacasa2.jclic.inst" />
+ <shortcut project="lacasa2.jclic.zip" text="La casa" description="" icon="" />
+</JClicInstall>
+

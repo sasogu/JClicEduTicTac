@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El món et parla 2" authors="Inema estudis, Enric lópez, Maria Borrell, Imma Palahí" folder="monp4">
+ <file src="monp4.jclic.zip" />
+ <file src="9na/9na.jclic.zip" />
+ <file src="8ll/8ll.jclic.zip" />
+ <file src="7es/7es.jclic.zip" />
+ <file src="6ca/6ca.jclic.zip" />
+ <file src="5in/5in.jclic.zip" />
+ <file src="4tr/4tr.jclic.zip" />
+ <file src="3an/3an.jclic.zip" />
+ <file src="2ac/2ac.jclic.zip" />
+ <file src="1re/1re.jclic.zip" />
+ <file src="monp4.jclic.inst" />
+ <shortcut project="monp4.jclic.zip" text="El món et parla - P4" description="" icon="" />
+</JClicInstall>
+

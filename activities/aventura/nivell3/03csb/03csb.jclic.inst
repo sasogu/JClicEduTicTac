@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Contraccions" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell3/03csb">
+ <file src="03csb.jclic.zip" />
+ <file src="03csb.jclic.inst" />
+ <shortcut project="03csb.jclic.zip" text="Contraccions" description="" icon="" />
+</JClicInstall>
+

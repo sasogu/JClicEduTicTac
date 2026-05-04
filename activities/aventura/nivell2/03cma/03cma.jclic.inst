@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Síl·labes" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell2/03cma">
+ <file src="03cma.jclic.zip" />
+ <file src="03cma.jclic.inst" />
+ <shortcut project="03cma.jclic.zip" text="Síl·labes" description="" icon="" />
+</JClicInstall>
+

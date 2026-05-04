@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="r/rr" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell1/07ci">
+ <file src="07ci.jclic.zip" />
+ <file src="07ci.jclic.inst" />
+ <shortcut project="07ci.jclic.zip" text="r/rr" description="" icon="" />
+</JClicInstall>
+

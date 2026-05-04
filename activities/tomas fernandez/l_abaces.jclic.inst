@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El Ábaco" authors="Ana Padilla Sánchez, Tomás Fernández (traducción al castellano)" folder="tomas fernandez">
+ <file src="l_abaces.jclic.zip" />
+ <file src="l_abaces.jclic.inst" />
+ <shortcut project="l_abaces.jclic.zip" text="El Ábaco" description="" icon="" />
+</JClicInstall>
+

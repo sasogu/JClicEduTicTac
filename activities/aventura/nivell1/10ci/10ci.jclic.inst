@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="D'aquí i d'allà" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell1/10ci">
+ <file src="10ci.jclic.zip" />
+ <file src="10ci.jclic.inst" />
+ <shortcut project="10ci.jclic.zip" text="D'aquí i d'allà" description="" icon="" />
+</JClicInstall>
+

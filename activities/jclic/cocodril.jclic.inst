@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Els cocodrils" authors="Rosa Vilaró, Veu: Núria Vargas" folder="jclic">
+ <file src="cocodril.jclic.zip" />
+ <file src="cocodril.jclic.inst" />
+ <shortcut project="cocodril.jclic.zip" text="Els cocodrils" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Animales domésticos y salvajes" authors="Mª Carme Fernández Sevilla" folder="jclic">
+ <file src="domsalva.jclic.zip" />
+ <file src="domsalva.jclic.inst" />
+ <shortcut project="domsalva.jclic.zip" text="Animales domésticos y salvajes" description="" icon="" />
+</JClicInstall>
+

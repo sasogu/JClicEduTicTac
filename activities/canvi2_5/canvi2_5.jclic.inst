@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Els canvis en el treball i la comunicació" authors="Joan Verdaguer i Andrés" folder="canvi2_5">
+ <file src="canvi2_5.jclic.zip" />
+ <file src="canvi2_5.jclic.inst" />
+ <shortcut project="canvi2_5.jclic.zip" text="Els canvis en el treball i la comunicació" description="" icon="" />
+</JClicInstall>
+

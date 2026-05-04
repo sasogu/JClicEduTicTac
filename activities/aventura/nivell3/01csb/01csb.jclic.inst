@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="u/v - p/b" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell3/01csb">
+ <file src="01csb.jclic.zip" />
+ <file src="01csb.jclic.inst" />
+ <shortcut project="01csb.jclic.zip" text="u/v - p/b" description="" icon="" />
+</JClicInstall>
+

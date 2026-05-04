@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Coses de classe" authors="Joan A. Sánchez i Ma. Lourdes Tolo" folder="coses">
+ <file src="cosesllig.jclic.zip" />
+ <file src="cosesllig.jclic.inst" />
+ <shortcut project="cosesllig.jclic.zip" text="Coses de classe (lligada)" description="" icon="" />
+</JClicInstall>
+

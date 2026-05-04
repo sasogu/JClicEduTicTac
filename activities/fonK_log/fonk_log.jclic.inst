@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Fonema /K/" authors="Virginia Aragón Jiménez" folder="fonK_log">
+ <file src="fonk_log.jclic.zip" />
+ <file src="fonk_log.jclic.inst" />
+ <shortcut project="fonk_log.jclic.zip" text="Fonema /K/" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El paisatge urbà" authors="Joan Verdaguer i Andrés" folder="urba4">
+ <file src="urba4.jclic.zip" />
+ <file src="urba4.jclic.inst" />
+ <shortcut project="urba4.jclic.zip" text="El paisatge urbà" description="" icon="" />
+</JClicInstall>
+

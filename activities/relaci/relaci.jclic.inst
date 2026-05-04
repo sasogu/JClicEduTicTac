@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Nos relacionamos con el exterior" authors="José Antonio Sánchez Rivas" folder="relaci">
+ <file src="relaci.jclic.zip" />
+ <file src="relaci.jclic.inst" />
+ <shortcut project="relaci.jclic.zip" text="Nos relacionamos con el exterior" description="" icon="" />
+</JClicInstall>
+

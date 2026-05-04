@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Com s'escriu? Com se pronuncia? (Iniciació)" authors="Josep Pi i Mallarach, Francesc Busquets i Burguera, Maria Areny i Busquets, Lluïsa Bruch i Salada, Montserrat Torra i Puigdellívol" folder="galial/g0100_a">
+ <file src="g0101a_intro.jclic.zip" />
+ <file src="g0101a.jclic.zip" />
+ <file src="g0102a.jclic.zip" />
+ <file src="g0103a.jclic.zip" />
+ <file src="g0104a.jclic.zip" />
+ <file src="pell.png" />
+ <file src="gali.xml" />
+ <file src="g0101a.jclic.inst" />
+ <shortcut project="g0101a_intro.jclic.zip" text="Com s'escriu? Com se pronuncia? (Iniciació)" description="" icon="" />
+</JClicInstall>
+

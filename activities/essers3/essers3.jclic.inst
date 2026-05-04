@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Éssers vius i éssers inerts" authors="Joan Verdaguer i Andrés" folder="essers3">
+ <file src="essers3.jclic.zip" />
+ <file src="essers3.jclic.inst" />
+ <shortcut project="essers3.jclic.zip" text="Éssers vius i éssers inerts" description="" icon="" />
+</JClicInstall>
+

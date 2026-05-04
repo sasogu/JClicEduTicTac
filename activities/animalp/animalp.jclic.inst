@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Los animales - II" authors="Javier Rey, Javier Donézar y Ramón Martín" folder="animalp">
+ <file src="animalp.jclic.zip" />
+ <file src="animalp.jclic.inst" />
+ <shortcut project="animalp.jclic.zip" text="Los Animales - II" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La Terra, el Sol i la Lluna" authors="Joan Verdaguer i Andrés" folder="tersolu3">
+ <file src="tersolu3.jclic.zip" />
+ <file src="tersolu3.jclic.inst" />
+ <shortcut project="tersolu3.jclic.zip" text="La Terra, el Sol i la Lluna" description="" icon="" />
+</JClicInstall>
+

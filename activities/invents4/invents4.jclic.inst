@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Els invents i les màquines" authors="Joan Verdaguer i Andrés" folder="invents4">
+ <file src="invents4.jclic.zip" />
+ <file src="invents4.jclic.inst" />
+ <shortcut project="invents4.jclic.zip" text="Els invents i les màquines" description="" icon="" />
+</JClicInstall>
+

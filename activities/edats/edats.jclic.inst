@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Les edats de la història" authors="Joan Verdaguer i Andrés" folder="edats">
+ <file src="edats.jclic.zip" />
+ <file src="edats.jclic.inst" />
+ <shortcut project="edats.jclic.zip" text="Les edats de la història" description="" icon="" />
+</JClicInstall>
+

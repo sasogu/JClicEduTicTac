@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="El Medio Natural" authors="Moncho Marín Calvo" folder="medinat">
+ <file src="medinat.jclic.zip" />
+ <file src="medinat.jclic.inst" />
+ <file src="soltier/soltier.jclic.zip" />
+ <file src="natura/natura.jclic.zip" />
+ <file src="luz/luz.jclic.zip" />
+ <file src="lasplan/lasplan.jclic.zip" />
+ <file src="fuer/fuer.jclic.zip" />
+ <file src="elec/elec.jclic.zip" />
+ <shortcut project="medinat.jclic.zip" text="El Medio Natural" description="" icon="" />
+</JClicInstall>
+

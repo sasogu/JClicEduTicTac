@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="La vida a les comarques del litoral" authors="Joan Verdaguer i Andrés" folder="litoral4">
+ <file src="litoral4.jclic.zip" />
+ <file src="litoral4.jclic.inst" />
+ <shortcut project="litoral4.jclic.zip" text="Comarques del litoral" description="" icon="" />
+</JClicInstall>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Mates 1º de primaria" authors="JUAN ANTONIO PUNZANO SIRVENT, AURELIO J. MORÁN ORTEGA" folder="jclic">
+ <file src="mates1.jclic.zip" />
+ <file src="mates1a/mates1a.jclic.zip" />
+ <file src="mates1b/mates1b.jclic.zip" />
+ <file src="mates1.jclic.inst" />
+ <shortcut project="mates1.jclic.zip" text="Mates 1º de primaria" description="" icon="" />
+</JClicInstall>
+

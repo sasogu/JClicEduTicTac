@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="L'edat mitjana: La formació de Catalunya" authors="Joan Verdaguer i Andrés" folder="mitjana6">
+ <file src="mitjana6.jclic.zip" />
+ <file src="mitjana6.jclic.inst" />
+ <shortcut project="mitjana6.jclic.zip" text="L'edat mitjana: La formació de Catalunya" description="" icon="" />
+</JClicInstall>
+

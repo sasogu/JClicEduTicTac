@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Pretèrits" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell3/01csa">
+ <file src="01csa.jclic.zip" />
+ <file src="01csa.jclic.inst" />
+ <shortcut project="01csa.jclic.zip" text="Pretèrits" description="" icon="" />
+</JClicInstall>
+

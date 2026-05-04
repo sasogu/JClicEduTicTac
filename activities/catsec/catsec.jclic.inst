@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Adaptació d'activitats Babel de llengua catalana per a secundària" authors="Diversos autors" folder="catsec">
+ <file src="catsec.jclic.zip" />
+ <file src="catsec.jclic.inst" />
+ <shortcut project="catsec.jclic.zip" text="Activitats Babel de llengua catalana" description="" icon="" />
+</JClicInstall>
+

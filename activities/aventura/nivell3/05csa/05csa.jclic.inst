@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicInstall title="Puntuació 1" authors="Elisabet Badia, M. Carme Camrpubí, Gemma Vicente" folder="aventura/nivell3/05csa">
+ <file src="05csa.jclic.zip" />
+ <file src="05csa.jclic.inst" />
+ <shortcut project="05csa.jclic.zip" text="Puntuació 1" description="" icon="" />
+</JClicInstall>
+
