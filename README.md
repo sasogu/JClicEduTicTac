@@ -45,8 +45,11 @@ Comandes suportades:
 scripts/deploy-jclic.sh setup
 scripts/deploy-jclic.sh install-nginx
 scripts/deploy-jclic.sh deploy
+scripts/deploy-jclic.sh deploy-fast
 scripts/deploy-jclic.sh all
 ```
+
+`deploy-fast` publica canvis rapidament sense sincronitzar `activities/`.
 
 Variables configurables per entorn:
 
@@ -117,8 +120,11 @@ Comandos soportados:
 scripts/deploy-jclic.sh setup
 scripts/deploy-jclic.sh install-nginx
 scripts/deploy-jclic.sh deploy
+scripts/deploy-jclic.sh deploy-fast
 scripts/deploy-jclic.sh all
 ```
+
+`deploy-fast` publica cambios rapidamente sin sincronizar `activities/`.
 
 Variables configurables por entorno:
 

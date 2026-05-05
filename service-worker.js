@@ -1,5 +1,5 @@
-const STATIC_CACHE = 'jclic-static-v5';
-const RUNTIME_CACHE = 'jclic-runtime-v5';
+const STATIC_CACHE = 'jclic-static-v0.5';
+const RUNTIME_CACHE = 'jclic-runtime-v0.5';
 
 const MAIN_IMAGES = [
   './assets/images/192.png',

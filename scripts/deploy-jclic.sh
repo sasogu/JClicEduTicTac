@@ -16,6 +16,7 @@ Uso:
   scripts/deploy-jclic.sh setup
   scripts/deploy-jclic.sh install-nginx
   scripts/deploy-jclic.sh deploy
+  scripts/deploy-jclic.sh deploy-fast
   scripts/deploy-jclic.sh all
 
 Variables opcionales:
@@ -104,6 +105,41 @@ deploy_release() {
   echo "[deploy] OK: https://${DOMAIN}"
 }
 
+deploy_fast_release() {
+  local ts release
+  ts="$(date +%Y%m%d%H%M%S)"
+  release="${REMOTE_RELEASES}/${ts}"
+
+  echo "[deploy-fast] Creando release remoto ${release}"
+  ssh -p "${REMOTE_PORT}" "${REMOTE_HOST}" "mkdir -p '${release}'"
+
+  echo "[deploy-fast] Subiendo archivos con rsync (sin activities/)"
+  rsync -az --delete \
+    --exclude '.git' \
+    --exclude '.vscode' \
+    --exclude 'scripts' \
+    --exclude '.DS_Store' \
+    --exclude 'activities' \
+    -e "ssh -p ${REMOTE_PORT}" \
+    "${LOCAL_DIR}/" "${REMOTE_HOST}:${release}/"
+
+  echo "[deploy-fast] Reutilizando activities del release actual (si existe)"
+  ssh -p "${REMOTE_PORT}" "${REMOTE_HOST}" "
+    PREV_ACTIVITIES=\$(readlink -f '${REMOTE_CURRENT}/activities' 2>/dev/null || true)
+    if [ -n \"\${PREV_ACTIVITIES}\" ] && [ -d \"\${PREV_ACTIVITIES}\" ]; then
+      ln -s \"\${PREV_ACTIVITIES}\" '${release}/activities'
+    fi
+  "
+
+  echo "[deploy-fast] Activando release"
+  ssh -p "${REMOTE_PORT}" "${REMOTE_HOST}" "ln -sfn '${release}' '${REMOTE_CURRENT}'"
+
+  echo "[deploy-fast] Limpiando releases antiguos (mantener 5)"
+  ssh -p "${REMOTE_PORT}" "${REMOTE_HOST}" "cd '${REMOTE_RELEASES}' && ls -1dt */ 2>/dev/null | tail -n +6 | xargs -r rm -rf"
+
+  echo "[deploy-fast] OK: https://${DOMAIN}"
+}
+
 cmd="${1:-}"
 case "${cmd}" in
   setup)
@@ -114,6 +150,9 @@ case "${cmd}" in
     ;;
   deploy)
     deploy_release
+    ;;
+  deploy-fast)
+    deploy_fast_release
     ;;
   all)
     setup_remote_structure

@@ -1,6 +1,6 @@
 {
   "name": "Biblioteca JClic EduTicTac",
-  "short_name": "JClic",
+  "short_name": "EduJClic",
   "description": "Biblioteca de actividades JClic preparada para uso en aula e instalacion como aplicacion web.",
   "start_url": "./index.html",
   "scope": "./",

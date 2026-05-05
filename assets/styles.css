@@ -6,7 +6,6 @@
   cursor: pointer;
   padding: 4px 6px;
   border-radius: 6px;
-  margin-left: 8px;
   vertical-align: middle;
   transition: background 0.15s;
 }
@@ -18,6 +17,7 @@
   vertical-align: middle;
   margin-bottom: 2px;
 }
+.card-actions { display: flex; align-items: center; gap: 2px; }
 .favorite-btn {
   background: none;
   border: none;
@@ -25,7 +25,6 @@
   cursor: pointer;
   padding: 4px 6px;
   border-radius: 6px;
-  margin-left: 4px;
   vertical-align: middle;
   transition: background 0.15s, color 0.15s;
 }

@@ -65,7 +65,7 @@ function createActivityLink(activity, mode) {
 
   copyBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    const absUrl = `https://jclic.edutictac.es/${buildPlayerHref(activity)}`;
+    const absUrl = `${window.location.origin}/${buildPlayerHref(activity)}`;
     navigator.clipboard.writeText(absUrl).then(() => {
       showCopyMessage(copyBtn, '¡Enlace copiado!');
     });
@@ -89,6 +89,14 @@ function createActivityLink(activity, mode) {
   favoriteBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>';
 
   if (mode === 'card') {
+    if (activity.thumbnail) {
+      const thumbnail = document.createElement('img');
+      thumbnail.className = 'card-thumb';
+      thumbnail.src = activity.thumbnail;
+      thumbnail.alt = activity.thumbnailAlt || '';
+      link.appendChild(thumbnail);
+    }
+
     const title = document.createElement('h2');
     title.className = 'card-title';
     title.textContent = activity.title || '';
@@ -99,8 +107,11 @@ function createActivityLink(activity, mode) {
     category.textContent = activity.category || '';
     link.appendChild(category);
 
-    link.appendChild(favoriteBtn);
-    link.appendChild(copyBtn);
+    const cardActions = document.createElement('div');
+    cardActions.className = 'card-actions';
+    cardActions.appendChild(favoriteBtn);
+    cardActions.appendChild(copyBtn);
+    link.appendChild(cardActions);
     return link;
   }
 
@@ -115,8 +126,11 @@ function createActivityLink(activity, mode) {
     link.appendChild(thumbnail);
   }
   link.appendChild(title);
-  link.appendChild(favoriteBtn);
-  link.appendChild(copyBtn);
+  const rowActions = document.createElement('div');
+  rowActions.className = 'card-actions';
+  rowActions.appendChild(favoriteBtn);
+  rowActions.appendChild(copyBtn);
+  link.appendChild(rowActions);
   return link;
 }
 
@@ -213,6 +227,8 @@ let activityIconsReady = false;
 let remoteCoversReady = false;
 const REMOTE_PROJECTS_BASE = 'https://clic.xtec.cat/projects';
 const REMOTE_PROJECTS_INDEX = `${REMOTE_PROJECTS_BASE}/projects.json`;
+const REMOTE_COVERS_CACHE_KEY = 'jclic-remote-covers-v1';
+const REMOTE_COVERS_CACHE_TTL = 7 * 24 * 60 * 60 * 1000;
 const LOCALE_STORAGE_KEY = 'jclic-ui-locale';
 const favorites = loadFavorites();
 const activityIndex = new Map();
@@ -606,6 +622,26 @@ function applyActivityIcons(iconMap) {
 async function loadOfficialCovers() {
   if (remoteCoversReady) return;
   remoteCoversReady = true;
+
+  // Intenta leer del caché en localStorage (TTL 7 días)
+  let pathEntries = null;
+  let titleEntries = null;
+  try {
+    const raw = localStorage.getItem(REMOTE_COVERS_CACHE_KEY);
+    if (raw) {
+      const { ts, paths, titles } = JSON.parse(raw);
+      if (Date.now() - ts < REMOTE_COVERS_CACHE_TTL) {
+        pathEntries = paths;
+        titleEntries = titles;
+      }
+    }
+  } catch (_) {}
+
+  if (pathEntries) {
+    applyRemoteCovers(new Map(pathEntries), new Map(titleEntries));
+    return;
+  }
+
   try {
     const response = await fetch(REMOTE_PROJECTS_INDEX);
     if (!response.ok) return;
@@ -629,6 +665,14 @@ async function loadOfficialCovers() {
       const firstSegment = path.split('/')[0];
       if (firstSegment && !pathMap.has(firstSegment)) pathMap.set(firstSegment, absoluteUrl);
     });
+
+    try {
+      localStorage.setItem(REMOTE_COVERS_CACHE_KEY, JSON.stringify({
+        ts: Date.now(),
+        paths: Array.from(pathMap),
+        titles: Array.from(titleMap),
+      }));
+    } catch (_) {}
 
     applyRemoteCovers(pathMap, titleMap);
   } catch (error) {
@@ -779,10 +823,16 @@ function updateFavoriteButtonsState(key) {
 }
 
 function applyFavoriteButtonsState() {
+  if (favorites.size === 0) return;
   document.querySelectorAll('a[data-activity-key]').forEach((host) => {
     const key = host.dataset.activityKey;
-    if (!key) return;
-    updateFavoriteButtonsState(key);
+    if (!key || !favorites.has(key)) return;
+    const btn = host.querySelector('.favorite-btn');
+    if (!btn) return;
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
+    btn.title = 'Quitar de favoritas';
+    btn.setAttribute('aria-label', 'Quitar de favoritas');
   });
 }
 
@@ -792,9 +842,16 @@ function renderFavoritesView() {
   Array.from(favorites).forEach((key) => {
     const activity = activityIndex.get(key);
     if (!activity) return;
-    favoritesGrid.appendChild(createActivityLink(activity, 'card'));
+    const card = createActivityLink(activity, 'card');
+    const btn = card.querySelector('.favorite-btn');
+    if (btn) {
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      btn.title = 'Quitar de favoritas';
+      btn.setAttribute('aria-label', 'Quitar de favoritas');
+    }
+    favoritesGrid.appendChild(card);
   });
-  applyFavoriteButtonsState();
 }
 
 function toggleFavoriteByKey(key) {

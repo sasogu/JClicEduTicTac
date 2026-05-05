@@ -41,7 +41,30 @@ Hace deploy atómico por releases:
 - Actualiza `current` al release nuevo
 - Mantiene solo los 5 releases más recientes
 
-## 4) Todo en una orden
+### Variante rápida (sin activities)
+
+```bash
+bash scripts/deploy-jclic.sh deploy-fast
+```
+
+Ideal para cambios de interfaz o scripts cuando no se ha modificado `activities/`.
+El script intenta reutilizar automáticamente `activities/` desde la release activa anterior.
+
+## 4) Actualizar portadas locales (opcional)
+
+Descarga las portadas de `clic.xtec.cat` y las guarda en `assets/covers/`.
+También actualiza `data/activities.json` con las rutas locales.
+
+```bash
+node scripts/cache-covers.js            # descarga portadas nuevas
+node scripts/cache-covers.js --dry-run  # solo muestra qué haría
+node scripts/cache-covers.js --force    # re-descarga aunque ya existan
+```
+
+Ejecutar antes de `deploy` cuando haya actividades nuevas o se quiera refrescar las imágenes.
+Las portadas descargadas se incluyen en el siguiente `rsync`.
+
+## 5) Todo en una orden
 
 ```bash
 bash scripts/deploy-jclic.sh all
