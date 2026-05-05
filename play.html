@@ -160,7 +160,10 @@ window.JClicDataOptions = { noInit: true };
 <body>
 <div class="player-shell">
   <header class="topbar">
-    <button id="backButton" class="topbar-button" type="button">Volver</button>
+    <div class="topbar-actions">
+      <button id="backButton" class="topbar-button" type="button">Volver</button>
+      <button id="libraryButton" class="topbar-button" type="button">Biblioteca</button>
+    </div>
     <div class="topbar-title">
       <p id="activityName" class="topbar-name">JClic local</p>
     </div>
@@ -178,10 +181,12 @@ const online = params.get('online');
 const player = document.getElementById('player');
 const activityName = document.getElementById('activityName');
 const backButton = document.getElementById('backButton');
+const libraryButton = document.getElementById('libraryButton');
 const reloadButton = document.getElementById('reloadButton');
 const fullscreenButton = document.getElementById('fullscreenButton');
 let remoteFrame = null;
 let embeddedControlsObserver = null;
+const PLAYBACK_CONTEXT_KEY = 'jclic-playback-context';
 
 function normalizeProjectReference(projectPath) {
   if (!projectPath) return '';
@@ -258,6 +263,32 @@ function watchEmbeddedPlayerButtons() {
   hideEmbeddedPlayerButtons();
 }
 
+function getLibraryTargetUrl() {
+  try {
+    const raw = sessionStorage.getItem(PLAYBACK_CONTEXT_KEY);
+    if (!raw) return 'index.html';
+    const context = JSON.parse(raw);
+    const params = new URLSearchParams();
+
+    if (context.view === 'allView' || context.view === 'libraryView') {
+      params.set('view', context.view);
+    }
+
+    if (Array.isArray(context.section) && context.section.length) {
+      const sectionValue = context.section
+        .filter((value) => Number.isInteger(value) && value >= 0)
+        .join('.');
+      if (sectionValue) params.set('section', sectionValue);
+    }
+
+    const query = params.toString();
+    return query ? `index.html?${query}` : 'index.html';
+  } catch (error) {
+    console.warn('No se pudo recuperar el contexto de biblioteca.', error);
+    return 'index.html';
+  }
+}
+
 backButton.addEventListener('click', () => {
   if (window.history.length > 1) {
     window.history.back();
@@ -265,6 +296,10 @@ backButton.addEventListener('click', () => {
   }
 
   window.location.href = 'index.html';
+});
+
+libraryButton.addEventListener('click', () => {
+  window.location.href = getLibraryTargetUrl();
 });
 
 reloadButton.addEventListener('click', () => {

@@ -1,5 +1,6 @@
 const CATALOG_URL = 'data/activities.json';
 const LOCAL_ACTIVITIES_BASE = 'activities';
+const PLAYBACK_CONTEXT_KEY = 'jclic-playback-context';
 
 async function loadCatalog() {
   const response = await fetch(CATALOG_URL);
@@ -294,6 +295,65 @@ function getSectionPath(section) {
     node = getParentSection(node);
   }
   return path;
+}
+function getSectionIndexChain(section) {
+  const chain = [];
+  let node = section;
+  while (node) {
+    const parent = getParentSection(node);
+    const siblings = getChildSections(parent);
+    const index = siblings.indexOf(node);
+    if (index < 0) return [];
+    chain.unshift(index);
+    node = parent;
+  }
+  return chain;
+}
+function resolveSectionFromChain(chain) {
+  if (!Array.isArray(chain) || !chain.length) return null;
+  let node = null;
+  for (const index of chain) {
+    const siblings = getChildSections(node);
+    if (!Number.isInteger(index) || index < 0 || index >= siblings.length) return null;
+    node = siblings[index];
+  }
+  return node;
+}
+function savePlaybackContext() {
+  try {
+    const payload = {
+      view: activeView,
+      section: getSectionIndexChain(currentSection),
+      ts: Date.now()
+    };
+    sessionStorage.setItem(PLAYBACK_CONTEXT_KEY, JSON.stringify(payload));
+  } catch (error) {
+    console.warn('No se pudo guardar el contexto de reproduccion.', error);
+  }
+}
+function applyPlaybackContextFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const viewParam = params.get('view');
+  const sectionParam = params.get('section');
+
+  if (viewParam === 'libraryView' || viewParam === 'allView') {
+    activeView = viewParam;
+  }
+
+  if (activeView === 'libraryView' && sectionParam) {
+    const chain = sectionParam
+      .split('.')
+      .map((part) => Number(part))
+      .filter((value) => Number.isInteger(value) && value >= 0);
+    currentSection = resolveSectionFromChain(chain);
+  }
+
+  tabs.forEach((tab) => {
+    tab.classList.toggle('active', tab.dataset.view === activeView);
+  });
+  document.querySelectorAll('.view').forEach((view) => {
+    view.hidden = view.id !== activeView;
+  });
 }
 function countMatchesWithin(section) {
   const scope = section || document.getElementById('libraryView');
@@ -672,6 +732,14 @@ document.addEventListener('click', (event) => {
   const disabled = event.target.closest('a.disabled');
   if (disabled) event.preventDefault();
 
+  const activityLink = event.target.closest('a.activity-row, a.card');
+  if (activityLink) {
+    const href = activityLink.getAttribute('href') || '';
+    if (href.startsWith('play.html?')) {
+      savePlaybackContext();
+    }
+  }
+
   const popupLink = event.target.closest('[data-popup="credits"]');
   if (popupLink) {
     event.preventDefault();
@@ -722,6 +790,7 @@ if (languageSelect) {
 totalUnique.textContent = totals.unique;
 applyInterfaceLanguage();
 initializeActivityMedia();
+applyPlaybackContextFromUrl();
 render();
 }
 
