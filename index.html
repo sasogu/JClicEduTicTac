@@ -18,7 +18,7 @@
 <div class="app">
 <header>
   <div class="header-inner"><h1>Biblioteca JClic EduTicTac</h1><div class="count"><span id="visibleCount">0</span> <span id="countLabel">en la biblioteca</span> · <span id="totalUnique">0</span> actividades</div></div>
-  <div class="tabs"><button class="tab active" data-view="libraryView">Biblioteca</button><button class="tab" data-view="allView">Todas las actividades</button></div>
+  <div class="tabs"><button class="tab active" data-view="libraryView">Biblioteca</button><button class="tab" data-view="allView">Todas las actividades</button><button class="tab" data-view="favoritesView">Favoritos</button></div>
   <div class="controls"><input id="search" type="search" placeholder="Buscar actividad" autocomplete="off"><div class="locale-control"><select id="languageSelect" aria-label="Idioma"><option value="auto">Auto</option><option value="es">ES</option><option value="va">VA</option></select></div></div>
 </header>
 <main>
@@ -28,6 +28,9 @@
     <div class="library-tree"></div>
   </section>
     <section id="allView" class="view" hidden>
+    <div class="grid"></div>
+  </section>
+    <section id="favoritesView" class="view" hidden>
     <div class="grid"></div>
   </section>
   <div id="empty" class="empty">No hay actividades que coincidan con la búsqueda.</div>

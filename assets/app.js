@@ -1,6 +1,7 @@
 const CATALOG_URL = 'data/activities.json';
 const LOCAL_ACTIVITIES_BASE = 'activities';
 const PLAYBACK_CONTEXT_KEY = 'jclic-playback-context';
+const FAVORITES_STORAGE_KEY = 'jclic-favorites';
 
 async function loadCatalog() {
   const response = await fetch(CATALOG_URL);
@@ -19,11 +20,37 @@ function buildPlayerHref(activity) {
   return activity.href || '#';
 }
 
+function getActivityKey(activity) {
+  return String(activity?.path || activity?.href || '').trim();
+}
+
+function loadFavorites() {
+  try {
+    const raw = localStorage.getItem(FAVORITES_STORAGE_KEY);
+    if (!raw) return new Set();
+    const data = JSON.parse(raw);
+    if (!Array.isArray(data)) return new Set();
+    return new Set(data.filter((item) => typeof item === 'string' && item.trim()));
+  } catch (error) {
+    console.warn('No se pudieron cargar favoritos.', error);
+    return new Set();
+  }
+}
+
+function saveFavorites(favorites) {
+  try {
+    localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(Array.from(favorites)));
+  } catch (error) {
+    console.warn('No se pudieron guardar favoritos.', error);
+  }
+}
+
 function createActivityLink(activity, mode) {
   const link = document.createElement('a');
   link.className = mode === 'card' ? 'card' : 'activity-row';
   link.href = buildPlayerHref(activity);
   link.target = '_self';
+  link.dataset.activityKey = getActivityKey(activity);
   link.dataset.source = activity.source || '';
   link.dataset.search = activity.search || '';
   link.dataset.path = activity.path || '';
@@ -54,6 +81,13 @@ function createActivityLink(activity, mode) {
     }, 1200);
   }
 
+  const favoriteBtn = document.createElement('button');
+  favoriteBtn.type = 'button';
+  favoriteBtn.className = 'favorite-btn';
+  favoriteBtn.title = 'Marcar como favorita';
+  favoriteBtn.setAttribute('aria-label', 'Marcar como favorita');
+  favoriteBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>';
+
   if (mode === 'card') {
     const title = document.createElement('h2');
     title.className = 'card-title';
@@ -65,6 +99,7 @@ function createActivityLink(activity, mode) {
     category.textContent = activity.category || '';
     link.appendChild(category);
 
+    link.appendChild(favoriteBtn);
     link.appendChild(copyBtn);
     return link;
   }
@@ -80,6 +115,7 @@ function createActivityLink(activity, mode) {
     link.appendChild(thumbnail);
   }
   link.appendChild(title);
+  link.appendChild(favoriteBtn);
   link.appendChild(copyBtn);
   return link;
 }
@@ -145,7 +181,8 @@ function renderCatalog(catalog) {
 }
 
 async function bootstrap() {
-await loadCatalog().then(renderCatalog);
+const catalog = await loadCatalog();
+renderCatalog(catalog);
 
 const search = document.getElementById('search');
 const visibleCount = document.getElementById('visibleCount');
@@ -162,10 +199,12 @@ const libraryBreadcrumb = document.getElementById('libraryBreadcrumb');
 const libraryCurrent = document.getElementById('libraryCurrent');
 const languageSelect = document.getElementById('languageSelect');
 const allCards = Array.from(document.querySelectorAll('#allView .card'));
+const favoritesGrid = document.querySelector('#favoritesView .grid');
 const pageTitle = document.querySelector('title');
 const headerTitle = document.querySelector('.header-inner h1');
 const tabLibrary = document.querySelector('.tab[data-view="libraryView"]');
 const tabAll = document.querySelector('.tab[data-view="allView"]');
+const tabFavorites = document.querySelector('.tab[data-view="favoritesView"]');
 const creditsTriggerTitle = document.querySelector('[data-popup="credits"] .activity-title');
 const creditsKicker = document.querySelector('.credits-kicker');
 const creditsSubtitle = document.querySelector('.credits-subtitle');
@@ -175,6 +214,25 @@ let remoteCoversReady = false;
 const REMOTE_PROJECTS_BASE = 'https://clic.xtec.cat/projects';
 const REMOTE_PROJECTS_INDEX = `${REMOTE_PROJECTS_BASE}/projects.json`;
 const LOCALE_STORAGE_KEY = 'jclic-ui-locale';
+const favorites = loadFavorites();
+const activityIndex = new Map();
+
+function registerActivities(node) {
+  if (!node || typeof node !== 'object') return;
+  if (Array.isArray(node)) {
+    node.forEach((item) => registerActivities(item));
+    return;
+  }
+  if (node.href || node.path) {
+    const key = getActivityKey(node);
+    if (key && !activityIndex.has(key)) activityIndex.set(key, node);
+  }
+  if (Array.isArray(node.activities)) registerActivities(node.activities);
+  if (Array.isArray(node.sections)) registerActivities(node.sections);
+}
+
+registerActivities(catalog.allActivities || []);
+registerActivities(catalog.library || {});
 const messages = {
   es: {
     htmlLang: 'es',
@@ -182,6 +240,7 @@ const messages = {
     headerTitle: 'Biblioteca JClic EduTicTac',
     tabLibrary: 'Biblioteca',
     tabAll: 'Todas las actividades',
+    tabFavorites: 'Favoritos',
     searchPlaceholder: 'Buscar actividad',
     languageLabel: 'Idioma',
     languageAuto: 'Auto',
@@ -214,6 +273,7 @@ const messages = {
     headerTitle: 'Biblioteca JClic EduTicTac',
     tabLibrary: 'Biblioteca',
     tabAll: 'Totes les activitats',
+    tabFavorites: 'Favorits',
     searchPlaceholder: 'Buscar activitat',
     languageLabel: 'Idioma',
     languageAuto: 'Automatic',
@@ -657,7 +717,11 @@ function updateTree() {
   return currentCount;
 }
 function render() {
-  const count = activeView === 'libraryView' ? updateTree() : filterRows('#allView .card');
+  const count = activeView === 'libraryView'
+    ? updateTree()
+    : activeView === 'favoritesView'
+      ? filterRows('#favoritesView .card')
+      : filterRows('#allView .card');
   visibleCount.textContent = count;
   countLabel.textContent = activeView === 'libraryView' ? (hasActiveFilters() ? text.countInLibrary : text.countInFolder) : text.visible;
   const homeMode = activeView === 'libraryView' && !hasActiveFilters() && currentSection === null;
@@ -680,6 +744,7 @@ function applyInterfaceLanguage() {
   if (headerTitle) headerTitle.textContent = text.headerTitle;
   if (tabLibrary) tabLibrary.textContent = text.tabLibrary;
   if (tabAll) tabAll.textContent = text.tabAll;
+  if (tabFavorites) tabFavorites.textContent = text.tabFavorites;
   search.placeholder = text.searchPlaceholder;
   libraryBack.textContent = text.back;
   empty.textContent = text.empty;
@@ -699,6 +764,47 @@ function applyInterfaceLanguage() {
     if (languageSelect.options[1]) languageSelect.options[1].textContent = text.languageEs;
     if (languageSelect.options[2]) languageSelect.options[2].textContent = text.languageVa;
   }
+}
+
+function updateFavoriteButtonsState(key) {
+  document.querySelectorAll('.favorite-btn').forEach((button) => {
+    const host = button.closest('a[data-activity-key]');
+    if (!host || host.dataset.activityKey !== key) return;
+    const active = favorites.has(key);
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-pressed', active ? 'true' : 'false');
+    button.title = active ? 'Quitar de favoritas' : 'Marcar como favorita';
+    button.setAttribute('aria-label', active ? 'Quitar de favoritas' : 'Marcar como favorita');
+  });
+}
+
+function applyFavoriteButtonsState() {
+  document.querySelectorAll('a[data-activity-key]').forEach((host) => {
+    const key = host.dataset.activityKey;
+    if (!key) return;
+    updateFavoriteButtonsState(key);
+  });
+}
+
+function renderFavoritesView() {
+  if (!favoritesGrid) return;
+  favoritesGrid.textContent = '';
+  Array.from(favorites).forEach((key) => {
+    const activity = activityIndex.get(key);
+    if (!activity) return;
+    favoritesGrid.appendChild(createActivityLink(activity, 'card'));
+  });
+  applyFavoriteButtonsState();
+}
+
+function toggleFavoriteByKey(key) {
+  if (!key) return;
+  if (favorites.has(key)) favorites.delete(key);
+  else favorites.add(key);
+  saveFavorites(favorites);
+  renderFavoritesView();
+  updateFavoriteButtonsState(key);
+  render();
 }
 function setLocaleChoice(nextChoice) {
   const normalized = nextChoice === 'es' || nextChoice === 'va' ? nextChoice : 'auto';
@@ -729,6 +835,15 @@ tabs.forEach((tab) => tab.addEventListener('click', () => {
   render();
 }));
 document.addEventListener('click', (event) => {
+  const favoriteButton = event.target.closest('.favorite-btn');
+  if (favoriteButton) {
+    event.preventDefault();
+    event.stopPropagation();
+    const host = favoriteButton.closest('a[data-activity-key]');
+    if (host) toggleFavoriteByKey(host.dataset.activityKey);
+    return;
+  }
+
   const disabled = event.target.closest('a.disabled');
   if (disabled) event.preventDefault();
 
@@ -790,6 +905,8 @@ if (languageSelect) {
 totalUnique.textContent = totals.unique;
 applyInterfaceLanguage();
 initializeActivityMedia();
+renderFavoritesView();
+applyFavoriteButtonsState();
 applyPlaybackContextFromUrl();
 render();
 }
