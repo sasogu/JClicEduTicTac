@@ -7,10 +7,18 @@ async function loadCatalog() {
   return response.json();
 }
 
+function buildPlayerHref(activity) {
+  if (!activity) return '#';
+  if (activity.source === 'online' && activity.path) {
+    return `play.html?project=${encodeURIComponent(activity.path)}&online=${encodeURIComponent(activity.href || '')}`;
+  }
+  return activity.href || '#';
+}
+
 function createActivityLink(activity, mode) {
   const link = document.createElement('a');
   link.className = mode === 'card' ? 'card' : 'activity-row';
-  link.href = activity.href || '#';
+  link.href = buildPlayerHref(activity);
   link.target = '_self';
   link.dataset.source = activity.source || '';
   link.dataset.search = activity.search || '';

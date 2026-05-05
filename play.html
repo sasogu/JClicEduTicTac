@@ -13,6 +13,18 @@
 <link rel="icon" href="assets/images/192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="assets/images/192.png">
 <style>
+:root {
+  color-scheme: light;
+  --bar-height: 64px;
+  --bg: #f4f4f4;
+  --panel: rgba(255, 255, 255, 0.96);
+  --line: #d8dee4;
+  --text: #1d252c;
+  --muted: #607080;
+  --accent: #176087;
+  --accent-strong: #0f4e6e;
+}
+
 html,
 body {
   width: 100%;
@@ -21,23 +33,123 @@ body {
 }
 
 body {
-  background: #f4f4f4;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .JClic {
+  width: 100%;
+  height: calc(100vh - var(--bar-height));
+}
+
+.JClic:fullscreen,
+.remote-frame:fullscreen {
   width: 100vw;
   height: 100vh;
+}
+
+.remote-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #fff;
+}
+
+.player-shell {
+  height: 100%;
+}
+
+.topbar {
+  height: var(--bar-height);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar-title {
+  min-width: 0;
+}
+
+.topbar-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topbar-button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.topbar-button:hover {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+}
+
+.topbar-button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.topbar-button.primary:hover {
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  color: #fff;
 }
 
 .error {
   max-width: 720px;
   margin: 40px auto;
   padding: 18px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #1d252c;
   background: #fff;
   border: 1px solid #d8dee4;
   border-radius: 8px;
+}
+
+@media (max-width: 760px) {
+  :root {
+    --bar-height: 116px;
+  }
+
+  .topbar {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    padding: 10px 12px;
+  }
+
+  .topbar-actions {
+    justify-content: space-between;
+  }
+
+  .topbar-button {
+    flex: 1 1 0;
+    min-width: 0;
+  }
 }
 </style>
 <script>
@@ -46,18 +158,168 @@ window.JClicDataOptions = { noInit: true };
 <script src="jclic-js/jclic.min.js"></script>
 </head>
 <body>
-<div id="player" class="JClic"></div>
+<div class="player-shell">
+  <header class="topbar">
+    <button id="backButton" class="topbar-button" type="button">Volver</button>
+    <div class="topbar-title">
+      <p id="activityName" class="topbar-name">JClic local</p>
+    </div>
+    <div class="topbar-actions">
+      <button id="reloadButton" class="topbar-button" type="button">Recargar</button>
+      <button id="fullscreenButton" class="topbar-button primary" type="button">Pantalla completa</button>
+    </div>
+  </header>
+  <div id="player" class="JClic"></div>
+</div>
 <script>
 const params = new URLSearchParams(window.location.search);
 const project = params.get('project');
+const online = params.get('online');
 const player = document.getElementById('player');
+const activityName = document.getElementById('activityName');
+const backButton = document.getElementById('backButton');
+const reloadButton = document.getElementById('reloadButton');
+const fullscreenButton = document.getElementById('fullscreenButton');
+let remoteFrame = null;
+let embeddedControlsObserver = null;
+
+function normalizeProjectReference(projectPath) {
+  if (!projectPath) return '';
+
+  const normalized = decodeURIComponent(projectPath);
+  const remoteBase = 'https://clic.xtec.cat/projects/';
+  if (normalized.startsWith(remoteBase)) {
+    return normalized.slice(remoteBase.length);
+  }
+  return normalized;
+}
+
+function decodeProjectName(projectPath) {
+  if (!projectPath) return 'JClic local';
+
+  const normalized = normalizeProjectReference(projectPath);
+  const fileName = normalized.split('/').pop() || normalized;
+  return fileName.replace(/\.jclic\.zip$/i, '').replace(/[_-]+/g, ' ').trim() || 'JClic local';
+}
+
+async function resolveActivityTitle(projectPath) {
+  if (!projectPath) return 'JClic local';
+
+  try {
+    const response = await fetch('data/activities.json');
+    if (!response.ok) throw new Error('No se pudo leer el catalogo');
+    const catalog = await response.json();
+    const normalizedProject = normalizeProjectReference(projectPath);
+    const targetHref = `play.html?project=${projectPath}`;
+
+    const stack = [];
+    if (Array.isArray(catalog.allActivities)) stack.push(...catalog.allActivities);
+    if (catalog.library) stack.push(catalog.library);
+
+    while (stack.length) {
+      const entry = stack.pop();
+      if (!entry || typeof entry !== 'object') continue;
+      if ((entry.href === targetHref || entry.path === normalizedProject) && entry.title) return entry.title;
+      if (Array.isArray(entry.activities)) stack.push(...entry.activities);
+      if (Array.isArray(entry.sections)) stack.push(...entry.sections);
+    }
+  } catch (error) {
+    console.warn('No se pudo resolver el nombre de la actividad.', error);
+  }
+
+  return decodeProjectName(projectPath);
+}
+
+function updateFullscreenButton() {
+  fullscreenButton.textContent = document.fullscreenElement ? 'Salir de pantalla completa' : 'Pantalla completa';
+}
+
+function hideEmbeddedPlayerButtons() {
+  const activePlayer = window.JClicObject?.currentPlayers?.[0];
+  const embeddedButtons = activePlayer?.skin?.buttons;
+  ['fullscreen', 'reset'].forEach((buttonName) => {
+    const button = embeddedButtons?.[buttonName];
+    if (button && typeof button.css === 'function') {
+      button.css('display', 'none');
+    }
+  });
+}
+
+function watchEmbeddedPlayerButtons() {
+  if (embeddedControlsObserver) {
+    embeddedControlsObserver.disconnect();
+  }
+
+  embeddedControlsObserver = new MutationObserver(() => {
+    hideEmbeddedPlayerButtons();
+  });
+
+  embeddedControlsObserver.observe(player, { childList: true, subtree: true });
+  hideEmbeddedPlayerButtons();
+}
+
+backButton.addEventListener('click', () => {
+  if (window.history.length > 1) {
+    window.history.back();
+    return;
+  }
+
+  window.location.href = 'index.html';
+});
+
+reloadButton.addEventListener('click', () => {
+  if (remoteFrame) {
+    remoteFrame.src = online;
+    return;
+  }
+
+  window.location.reload();
+});
+
+fullscreenButton.addEventListener('click', async () => {
+  try {
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      const fullscreenTarget = remoteFrame || player;
+      if (fullscreenTarget && fullscreenTarget.requestFullscreen) {
+        await fullscreenTarget.requestFullscreen();
+      }
+    }
+  } catch (error) {
+    console.error('No se pudo cambiar el modo de pantalla completa.', error);
+  }
+});
+
+document.addEventListener('fullscreenchange', updateFullscreenButton);
 
 if (!project) {
   player.className = 'error';
   player.textContent = 'No se ha indicado ninguna actividad local.';
+  activityName.textContent = 'Sin actividad seleccionada';
+} else if (online) {
+  remoteFrame = document.createElement('iframe');
+  remoteFrame.className = 'remote-frame';
+  remoteFrame.src = online;
+  remoteFrame.title = 'Reproductor JClic online';
+  remoteFrame.setAttribute('allowfullscreen', '');
+  player.replaceChildren(remoteFrame);
+  activityName.textContent = decodeProjectName(project);
+  resolveActivityTitle(project).then((title) => {
+    activityName.textContent = title;
+    document.title = `${title} · JClic local`;
+  });
 } else {
+  activityName.textContent = decodeProjectName(project);
   window.JClicObject.loadProject(player, project);
+  watchEmbeddedPlayerButtons();
+  resolveActivityTitle(project).then((title) => {
+    activityName.textContent = title;
+    document.title = `${title} · JClic local`;
+  });
 }
+
+updateFullscreenButton();
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
