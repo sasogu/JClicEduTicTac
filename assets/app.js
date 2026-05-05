@@ -12,6 +12,9 @@ function buildPlayerHref(activity) {
   if (activity.source === 'online' && activity.path) {
     return `play.html?project=${encodeURIComponent(activity.path)}&online=${encodeURIComponent(activity.href || '')}`;
   }
+  if (activity.path) {
+    return `play.html?project=${encodeURIComponent(activity.path)}`;
+  }
   return activity.href || '#';
 }
 
@@ -25,6 +28,31 @@ function createActivityLink(activity, mode) {
   link.dataset.path = activity.path || '';
   if (activity.popup) link.dataset.popup = activity.popup;
 
+  // Crear botón de copiar enlace
+  const copyBtn = document.createElement('button');
+  copyBtn.type = 'button';
+  copyBtn.className = 'copy-link-btn';
+  copyBtn.title = 'Copiar enlace';
+  copyBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+
+  copyBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const absUrl = `https://jclic.edutictac.es/${buildPlayerHref(activity)}`;
+    navigator.clipboard.writeText(absUrl).then(() => {
+      showCopyMessage(copyBtn, '¡Enlace copiado!');
+    });
+  });
+
+  function showCopyMessage(btn, msg) {
+    let msgDiv = document.createElement('span');
+    msgDiv.className = 'copy-link-msg';
+    msgDiv.textContent = msg;
+    btn.parentNode.appendChild(msgDiv);
+    setTimeout(() => {
+      msgDiv.remove();
+    }, 1200);
+  }
+
   if (mode === 'card') {
     const title = document.createElement('h2');
     title.className = 'card-title';
@@ -35,6 +63,8 @@ function createActivityLink(activity, mode) {
     category.className = 'category';
     category.textContent = activity.category || '';
     link.appendChild(category);
+
+    link.appendChild(copyBtn);
     return link;
   }
 
@@ -49,6 +79,7 @@ function createActivityLink(activity, mode) {
     link.appendChild(thumbnail);
   }
   link.appendChild(title);
+  link.appendChild(copyBtn);
   return link;
 }
 
