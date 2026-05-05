@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JClic local</title>
+<meta name="theme-color" content="#176087">
+<meta name="application-name" content="Biblioteca JClic EduTicTac">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="JClic">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/images/192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/images/192.png">
 <style>
 html,
 body {
@@ -49,6 +57,14 @@ if (!project) {
   player.textContent = 'No se ha indicado ninguna actividad local.';
 } else {
   window.JClicObject.loadProject(player, project);
+}
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js').catch((error) => {
+      console.error('No se pudo registrar el service worker.', error);
+    });
+  });
 }
 </script>
 </body>

@@ -139,7 +139,7 @@ const messages = {
   es: {
     htmlLang: 'es',
     pageTitle: 'Biblioteca JClic EduTicTac',
-    headerTitle: 'Biblioteca Ratoli EduTicTac',
+    headerTitle: 'Biblioteca JClic EduTicTac',
     tabLibrary: 'Biblioteca',
     tabAll: 'Todas las actividades',
     searchPlaceholder: 'Buscar actividad',
@@ -171,7 +171,7 @@ const messages = {
   va: {
     htmlLang: 'ca',
     pageTitle: 'Biblioteca JClic EduTicTac',
-    headerTitle: 'Biblioteca Ratoli EduTicTac',
+    headerTitle: 'Biblioteca JClic EduTicTac',
     tabLibrary: 'Biblioteca',
     tabAll: 'Totes les activitats',
     searchPlaceholder: 'Buscar activitat',
@@ -694,3 +694,11 @@ bootstrap().catch((error) => {
     empty.classList.add('visible');
   }
 });
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js').catch((error) => {
+      console.error('No se pudo registrar el service worker.', error);
+    });
+  });
+}
